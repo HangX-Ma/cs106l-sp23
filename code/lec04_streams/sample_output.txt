@@ -1,0 +1,14 @@
+// This is the output that the solution produces when run on words.txt
+This : 1
+is : 1
+a : 1
+sample : 1
+text : 1
+file : 1
+It : 1
+contains : 2
+multiple : 2
+lines : 1
+Each : 1
+line : 1
+words : 1
