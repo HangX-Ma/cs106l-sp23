@@ -2,3 +2,6 @@ vcpkg/
 build/
 build_and_run.sh
 CMakeLists.txt
+.vscode-ctags
+.gdb_history
+.vscode

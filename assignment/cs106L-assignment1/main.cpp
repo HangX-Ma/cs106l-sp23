@@ -144,16 +144,22 @@ int main() {
     string filename;
     getline(cin, filename);
 
-    ifstream in(filename);
-    int numPairs;
+    /* Read each line of the specific file */
+    std::ifstream fp(filename);
+    std::string line;
+
     // parse the first line as the number of tokens
-    in >> numPairs;
+    std::getline(fp, line);
+    int numPairs = std::stoi(line);
 
     // loop through each line, parsing out page names and calling findWikiLadder
-    string startPage, endPage;
+    std::string startPage, endPage;
     for (int i = 0; i < numPairs; i++) {
+        std::getline(fp, line);
+        std::stringstream ss(line);
+        ss >> startPage >> endPage;
+        // std::cout << startPage << ", " << endPage << std::endl;
         // parse the start and end page from each line
-        in >> startPage >> endPage;
         outputLadders.push_back(findWikiLadder(startPage, endPage));
     }
 
