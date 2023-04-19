@@ -20,7 +20,7 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 10
 
 ### Lectures
 
-- [x] Lecture 1 - 4
+- [x] Lecture 1 - 5
 - [x] Practice with Streams
 
 ### Assignments
