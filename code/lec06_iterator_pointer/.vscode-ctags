@@ -1,0 +1,13 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+college	lec06_readcsv.cpp	/^    std::string college;$/;"	m	struct:__anon1	file:
+createMap	lec06_readcsv.cpp	/^createMap(std::string filename) {$/;"	f
+main	lec06_readcsv.cpp	/^main(int argc, char* argv[]) {$/;"	f
+map_t	lec06_readcsv.cpp	/^typedef std::map<std::string, st_status_t> map_t;$/;"	t	file:
+printMap	lec06_readcsv.cpp	/^printMap(map_t csMap) {$/;"	f
+st_status_t	lec06_readcsv.cpp	/^} st_status_t;$/;"	t	typeref:struct:__anon1	file:
+year	lec06_readcsv.cpp	/^    int year;$/;"	m	struct:__anon1	file:

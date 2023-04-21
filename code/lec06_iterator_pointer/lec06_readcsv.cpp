@@ -59,10 +59,11 @@ printMap(map_t csMap) {
     }
 
     std::string stanford = "Stanford University";
-    for (const auto& person : csMap) {
+    for (auto iter = csMap.begin(); iter != csMap.end(); ++iter) {
+        const auto& [st, status] = *iter;
         printf("Professor [%s] is [%sStanford] alum\n", 
-                person.first.c_str(), 
-                person.second.college.compare(stanford) == 0 ? "not " : "");
+                st.c_str(), 
+                status.college.compare(stanford) == 0 ? "not " : "");
     }
 }
 
