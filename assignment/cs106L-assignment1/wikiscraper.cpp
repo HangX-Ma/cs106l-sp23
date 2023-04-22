@@ -26,9 +26,12 @@ using std::unordered_map;   using std::unordered_set;
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // BEGIN STUDENT CODE HERE
 bool valid_wikilink(const string& link) {
-    // replace these lines!
-    (void) link;
-    throw std::invalid_argument("Not implemented yet.\n");
+    return std::all_of(link.begin(), link.end(), [](const auto &item) {
+            if (item == '#' || item == ':') {
+                return false;
+            }
+            return true;
+    });
 }
 // END STUDENT CODE HERE
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -39,7 +42,7 @@ unordered_set<string> findWikiLinks(const string& inp) {
 
     unordered_set<string> ret;
 
-    auto url_start = inp.begin();
+    auto url_start = inp.begin(); // inp is a string holding the HTML for one wikipedia page
     auto end = inp.end();
 
     while(true) {
@@ -53,7 +56,12 @@ unordered_set<string> findWikiLinks(const string& inp) {
         ///////////////////////////////////////////////////////////////////////////////////////////////////
         // BEGIN STUDENT CODE HERE
         // Please delete this line when you start working!
-        throw std::invalid_argument("Not implemented yet.\n");
+        // throw std::invalid_argument("Not implemented yet.\n");
+        url_start = std::search(url_start, end, delim.begin(), delim.end());
+        if (url_start == end) {
+            // Don't print any message. Otherwise, this redundant operation will lead to test failure.
+            break;
+        }
         // END STUDENT CODE HERE
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -66,7 +74,11 @@ unordered_set<string> findWikiLinks(const string& inp) {
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////
         // BEGIN STUDENT CODE HERE (delete/edit this line)
-        auto url_end = url_start;
+        /** 
+         * Use .size() has the same effect as .length(). People prefer to using .size() when writing 
+         * template class and functions and .length() when working with plain strings. 
+         */
+        auto url_end = std::find(url_start + delim.length(), end, '\"');
         // END STUDENT CODE HERE
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -78,6 +90,7 @@ unordered_set<string> findWikiLinks(const string& inp) {
         ///////////////////////////////////////////////////////////////////////////////////////////////////
         // BEGIN STUDENT CODE HERE (delete/edit this line)
         string link;
+        link.assign(url_start + delim.length(), url_end);
         // END STUDENT CODE HERE
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -93,7 +106,6 @@ unordered_set<string> findWikiLinks(const string& inp) {
 
     }
     return ret;
-
 }
 
 
