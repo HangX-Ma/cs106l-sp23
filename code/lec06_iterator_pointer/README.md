@@ -1,6 +1,4 @@
-# About lecture 6
-
-## Exercise
+# Practice with stream
 
 We've created a `.csv` file containing some CS faculty, their university, and the year they graduated. Write a function called
 
