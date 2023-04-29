@@ -20,9 +20,10 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 10
 
 ### Lectures
 
-- [x] Lecture 1 - 6
-- [x] Lecture5: Practice with Streams
-- [x] Lecture6: Iterators
+- [x] Lecture 1 - 15 (I have read 2021 win materials)
+- [x] Lecture5: Practice with Streams - _Basic functions_
+- [x] Lecture6: Iterators - _Basic functions_
+- [x] Lecture8: Template Classes - _Add `insert`, `erase`, `clear`, `capacity`, `pop_back` and some const version methods and rvalue methods. What's more, `gtest` is used._
 
 ### Assignments
 
