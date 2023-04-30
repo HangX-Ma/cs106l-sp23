@@ -29,7 +29,7 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 10
 
 - [x] Assignment Setup
 - [x] Assignment 1: WikiRacer
-- [ ] Assignment 2: STL HashMap
+- [x] Assignment 2: STL HashMap
 
 ## License
 

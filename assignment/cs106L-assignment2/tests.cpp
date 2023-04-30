@@ -35,10 +35,16 @@ const std::vector<std::pair<std::string, int> > vec {
 
 const std::vector<std::string> keys {"A", "B", "C", "Not found"};
 template <typename Map1, typename Map2> bool check_map_equal(Map1& map, Map2& answer) {
-    if (answer.empty() != map.empty() || answer.size() != map.size()) return false;
+    if (answer.empty() != map.empty() || answer.size() != map.size()) {
+        printf("\tREASON: size not equal\n");
+        return false;  
+    }
 
     for (const auto& [key, mapped] : answer) {
-        if (map.contains(key) == false || map.at(key) != mapped) return false;
+        if (map.contains(key) == false || map.at(key) != mapped) {
+            printf("\tREASON: no item or not equal\n");
+            return false;
+        }
     }
     return true;
 }

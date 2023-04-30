@@ -2,8 +2,8 @@
 #include <set>
 using namespace std;
 //UNCOMMENT THESE FOR MILESTONE 2
-// #include "tests.cpp"
-// #include "test_settings.cpp"
+#include "tests.cpp"
+#include "test_settings.cpp"
 #include <iostream>
 
 //declaring functions now so we can use them befpre we implement them!
@@ -12,7 +12,7 @@ int student_main();
 //student_main helpers. Remember to change the necessary function signatures here and 
 //where they are implemented for milestone 1!
 void init_map(HashMap<string, int>& map);
-void print_difference(HashMap<string, int>& lecturer_record, string lecturer1, string lecturer2);
+void print_difference(HashMap<string, int>& lecturer_record, const string lecturer1, const string lecturer2);
 template<typename KeyType, typename MappedTyped>
 std::set<KeyType> find_keys(HashMap<KeyType, MappedTyped>& map);
 
@@ -25,7 +25,7 @@ int main() {
     } else if (answer == 2) {
         cout << ":P" << endl;
         //UNCOMMENT THIS FOR MILESTONE 2
-        // run_test_harness();
+        run_test_harness();
     } else {
         cout << "Please run your code again and hit 1 or 2 only!";
     }
@@ -66,7 +66,7 @@ void init_map(HashMap<string, int>& map) {
 
 //this will return a set of all the keys in parameter map
 template<typename KeyType, typename MappedTyped>
-std::set<KeyType> find_keys(const HashMap<KeyType, MappedTyped>& map){
+std::set<KeyType> find_keys(HashMap<KeyType, MappedTyped>& map){
     std::set<KeyType> res;
     for(auto it = map.begin(); it != map.end(); ++it){
         //Remember structured binding? :)

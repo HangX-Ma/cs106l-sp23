@@ -1,2 +1,47 @@
 Assignment 3: STL HashMap (short answer questions)
 Names:
+
+1. at() vs []
+Q: Explain the difference between at() and the implementation of the operator []. 
+Why did you have to overload one and not the other?
+
+A: at() has out_of_range checker, it is a safer but slower method to access data.
+However, sometimes we want the return value unchanged and also needs a safe method
+to access data. The const object needs the overloaded at() functions.
+
+
+2. Find vs. 𝓕𝓲𝓷𝓭
+Q: In addition to the HashMap::find member function, there is also a std::find function
+in the STL algorithms library. If you were searching for key k in HashMap m, is it
+preferable to call m.find(k) or std::find(m.begin(), m.end(), k)?
+
+A: It is preferable to call m.find(k) because its average complexity is O(1), faster than
+std::find(m.begin(), m.end(), k).
+
+
+3. RAII?
+Q: This HashMap class is RAII-compliant. Explain why.
+
+A: The _buckets_array is allocated by constructor and cleaned by destructor.
+
+
+4. Increments
+Briefly explain the implementation of HashMapIterator's operator++, which we provide for you.
+How does it work and what checks does it have?
+
+=================================================
+
+1. Attachment Issues
+Q: Why is it that we need to implement the special member functions in the HashMap class, but 
+we can default all the special member functions in the HashMapIterator class?
+
+A: For HashMapIterator, all its attributes are values, we can use the default SMF to copy value directly. 
+However, for HashMap, we need to manage pointers to allocated to memory, so we implement the SMF ourselves. 
+
+
+2. Move Semantics
+Q: In your move constructor or move assignment operator, why did you have to std::move each member,
+even though the parameter (named rhs) is already an r-value reference?
+
+A: The returned value's attribute of the r-value referenced object's method is actually a l-value type.
+Therefore, std::move is used to ensure the operation is actually move instead of copy.
