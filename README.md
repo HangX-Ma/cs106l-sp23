@@ -1,6 +1,7 @@
 # CS 106L, Standard C++ Programming, Spring 2023
 
 Before starting CS144, I need an elegant designed course to master the advanced language features of C++. Undoubtedly, CS106L is a good choice. If you have the similar plan, give it a try.
+> :star2: This course has been fully uploaded and all assignments have been finished.
 
 ## Configuration
 
