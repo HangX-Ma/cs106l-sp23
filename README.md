@@ -3,6 +3,8 @@
 Before starting CS144, I need an elegant designed course to master the advanced language features of C++. Undoubtedly, CS106L is a good choice. If you have the similar plan, give it a try.
 > :star2: This course has been fully uploaded and all assignments have been finished.
 
+> I think CS 106L doesn't provide enough practices for students. _Amirkabir University of Technology 1400-2: Advanced Programming Course_ provides lots of C++ exercises and you can find them in [aut courseworks](https://github.com/courseworks).
+
 ## Configuration
 
 The assignments use C++ standard `c++17`, which requires specific `g++` version to support it. Otherwise, you will encounter strange errors.
